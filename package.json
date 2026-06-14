@@ -1,0 +1,28 @@
+{
+  "name": "express__onp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsx --watch ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flavioribeiro-dev/node-express__onp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/flavioribeiro-dev/node-express__onp/issues"
+  },
+  "homepage": "https://github.com/flavioribeiro-dev/node-express__onp#readme",
+  "devDependencies": {
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
