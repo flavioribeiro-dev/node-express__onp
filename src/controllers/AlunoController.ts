@@ -13,7 +13,7 @@ class AlunoController {
     getAll(req: Request, res: Response) {
         // Validar os dados
         // Envia dados para o Service
-        const result = alunoService.getAll;
+        const result = alunoService.getAll();
         res.json(result)
     }
 
@@ -21,9 +21,7 @@ class AlunoController {
         // Validar os dados
         // Envia dados para o Service
         const result = alunoService.getById(req.params.id as any)
-        return {
-            nome: 'Flavio', email: 'flavio@gmail', telefone: '(98)98877-6644', senha: '9876543', cpf: '1233214566-54'
-        }
+        return result;
     }
 
     add(req: Request, res: Response) {
@@ -38,13 +36,15 @@ class AlunoController {
         // Validar os dados
         // Sanitizar dados
         // Envia dados para o Service
-        const result = alunoService.update(req.params.id as any);
+        const result = alunoService.update(req.params.id as any, req.body);
+        res.json(result);
     }
 
     delete(req: Request, res: Response) {
         // Validar os dados
         // Envia dados para o Service
         const result = alunoService.delete(req.params.id as any);
+        res.json(result);
     }
 }
 
