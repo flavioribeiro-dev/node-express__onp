@@ -1,12 +1,10 @@
 import Express from "express";
 import 'dotenv/config';
-<<<<<<< HEAD
-import router from "./router";
-=======
->>>>>>> parent of c5ef6bf (criacao do arquivo router)
+import router from "./routes/router";
 
 const server = Express();
-
+server.use(Express.urlencoded({extended: true}));
+server.use(router)
 
 server.listen({port: Number(process.env.PORT)}, () => {
     console.log(`Servidor rodando na porta ${process.env.PORT}`)
